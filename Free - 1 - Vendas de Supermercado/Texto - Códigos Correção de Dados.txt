@@ -1,0 +1,44 @@
+
+
+
+
+PARA COGS COM DUAS CASAS DECIMAIS:
+
+=ESQUERDA(Tabela_supermarket_sales___Sheet1[@cogs];2) & "," & SE(NÚM.CARACT(DIREITA(Tabela_supermarket_sales___Sheet1[@cogs];NÚM.CARACT(Tabela_supermarket_sales___Sheet1[@cogs])-2)) = 2; DIREITA(Tabela_supermarket_sales___Sheet1[@cogs];NÚM.CARACT(Tabela_supermarket_sales___Sheet1[@cogs])-2); SE(NÚM.CARACT(DIREITA(Tabela_supermarket_sales___Sheet1[@cogs];NÚM.CARACT(Tabela_supermarket_sales___Sheet1[@cogs])-2)) = 1; DIREITA(Tabela_supermarket_sales___Sheet1[@cogs];NÚM.CARACT(Tabela_supermarket_sales___Sheet1[@cogs])-2) & "0"; SE(NÚM.CARACT(DIREITA(Tabela_supermarket_sales___Sheet1[@cogs];NÚM.CARACT(Tabela_supermarket_sales___Sheet1[@cogs])-2)) = 0; DIREITA(Tabela_supermarket_sales___Sheet1[@cogs];NÚM.CARACT(Tabela_supermarket_sales___Sheet1[@cogs])-2) & "00")))
+
+
+
+PARA COGS COM TRÊS CASAS DECIMAIS:
+
+=ESQUERDA(Tabela_supermarket_sales___Sheet1[@cogs];3) & "," & SE(NÚM.CARACT(DIREITA(Tabela_supermarket_sales___Sheet1[@cogs];NÚM.CARACT(Tabela_supermarket_sales___Sheet1[@cogs])-3)) = 2; DIREITA(Tabela_supermarket_sales___Sheet1[@cogs];NÚM.CARACT(Tabela_supermarket_sales___Sheet1[@cogs])-3); SE(NÚM.CARACT(DIREITA(Tabela_supermarket_sales___Sheet1[@cogs];NÚM.CARACT(Tabela_supermarket_sales___Sheet1[@cogs])-3)) = 1; DIREITA(Tabela_supermarket_sales___Sheet1[@cogs];NÚM.CARACT(Tabela_supermarket_sales___Sheet1[@cogs])-3) & "0"; SE(NÚM.CARACT(DIREITA(Tabela_supermarket_sales___Sheet1[@cogs];NÚM.CARACT(Tabela_supermarket_sales___Sheet1[@cogs])-3)) = 0; DIREITA(Tabela_supermarket_sales___Sheet1[@cogs];NÚM.CARACT(Tabela_supermarket_sales___Sheet1[@cogs])-3) & "00")))
+
+
+
+
+Reduzi o Percentual de Margem Bruta para apenas duas casas após a vírgula
+
+Arrumei o Rendimento Bruto multiplicando o total da venda pelo % Margem Bruta.
+
+
+CORREÇÃO DA DATA DE INGLÊS PARA PORTUGUÊS:
+=DIVIDIRTEXTO(Tabela_supermarket_sales___Sheet1[@Data]; "/")
+=U2 & "/" & T2 & "/" & V2
+
+
+
+
+OPTEI POR REMOVER A COLUNA gross margin percentage E CALCULAR O LUCRO DIRETAMENTE, POIS COM ESSA TABELA O RESULTADO ERA MENOR
+
+
+classifiquei as colunas de acordo com seus tipos
+
+introduzi a coluna "mês" para auxílio de cálculos
+
+
+
+
+
+
+
+
+
